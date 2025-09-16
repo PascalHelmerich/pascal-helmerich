@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Pascal Helmerich</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Caveat:400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+        }
+        .title {
+            font-size: 3.2rem;
+            font-weight: 700;
+            letter-spacing: 0.03em;
+            color: #0077ff;
+            text-align: center;
+            margin-top: 0.5em;
+            margin-bottom: 0.5em;
+            padding-bottom: 0.2em;
+            border-bottom: 2px solid #0077ff;
+            box-shadow: none;
+            text-shadow: 0 2px 6px rgba(0,119,255,0.08);
+            transition: color 0.3s;
+        }
+        @media (max-width: 600px) {
+            .title { font-size: 2rem; }
+        }
+        .subtitle {
+            font-family: 'Caveat', cursive;
+            font-size: 2.2rem;
+            color: #0077ff;
+            font-weight: 400;
+            text-align: center;
+            margin-top: 0.5em;
+            text-shadow: 0 2px 8px rgba(0,119,255,0.08);
+            background: linear-gradient(90deg, #0077ff 0%, #00c6ff 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: fadeInSubtitle 1.2s ease;
+        }
+        @keyframes fadeInSubtitle {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @media (max-width: 600px) {
+            .title { font-size: 1.5rem; }
+            .subtitle { font-size: 1.3rem; }
+        }
+        .container-wrapper {
+            width: 100%;
+            padding-bottom: 1rem;
+        }
+
+        .container-wrapper:last-of-type {
+            padding-bottom: 40svh; /* Platz für das unten fixierte Bild */
+        }
+        .container {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    </style>
+    <link rel="stylesheet" href="css/projects.css">
+    <link rel="stylesheet" href="css/arrow.css">
+    <link rel="stylesheet" href="css/portrait.css">
+</head>
+<body>
+    <div class="image-fixed-bottom">
+        <a class="nav-icon nav-icon-left" href="#pawsonthewire" title="PawsOntheWire">
+            <img src="pawsonthewire.png" alt="PawsOntheWire Icon" />
+        </a>
+        <a class="nav-icon nav-icon-right" href="#pawsonthewire" title="PawsOntheWire">
+            <img src="pawsonthewire.png" alt="PawsOntheWire Icon" />
+        </a>
+        <span class="white-semicircle"></span>
+        <img class="image" src="portrait.png" alt="Portrait von mir selbst also Pascal"/>
+        <a class="nav-icon nav-icon-right" href="#pawsonthewire" title="PawsOntheWire">
+            <img src="pawsonthewire.png" alt="PawsOntheWire Icon" />
+        </a>
+        <a class="nav-icon nav-icon-right" href="#pawsonthewire" title="PawsOntheWire">
+            <img src="pawsonthewire.png" alt="PawsOntheWire Icon" />
+        </a>
+    </div>
+    <main>
+        <section class="container-wrapper" style="height: 100svh;">
+            <div class="container">
+                <div class="header">
+                    <h1 class="title">Hi, das bin ich Pascal 👋</h1>
+                    <h2 class="subtitle">Kreativität & Code – meine digitale Spielwiese</h2>
+                </div>
+            </div>
+            <div class="container" style="margin-top:-50px;">
+                <svg class="scribble-arrow scribble-arrow-responsive" viewBox="0 0 320 560" xmlns="http://www.w3.org/2000/svg">
+                    <path class="arrow-path" d="M80,80 Q180,160 120,240 Q60,320 160,320 Q260,320 160,440 Q120,480 160,510" stroke="#55c7fa" stroke-width="32" fill="none" stroke-linecap="round"/>
+                    <polygon class="arrow-head" points="100,500 220,500 160,560" fill="#55c7fa"/>
+                </svg>
+            </div>
+        </section>
+        <section class="container-wrapper" id="pawsonthewire" style="background-color: #b74220">
+            <div class="container screenshot-section">
+                <img class="screenshot-image" src="https://github.com/Raevren/hetznergamejam2025/raw/main/docs/screen_shot_start_screen.png" alt="Screenshot"/>
+                <div class="screenshot-textbox">
+                    <p class="screenshot-title">Paws on the Wire</p>
+                    <p><span class="screenshot-highlight">2025</span> – Zusammen mit Freunden beim Hetzner GameJam in Ansbach entwickelt: ein Endlessrunner-Browsergame!</p>
+                    <p>Das Thema war <span class="screenshot-highlight">balance</span>. Wir haben es mit einem Bären auf dem Hochseil umgesetzt. Mit abwechselndem Drücken von <b>A</b> und <b>D</b> hältst du das Gleichgewicht und baust Geschwindigkeit auf.</p>
+                    <p>Versuch es doch auch ein mal und geb mir deinen Highscore durch ;-)</p>
+                    <a href="https://raevren.github.io/hetznergamejam2025/" target="_blank">
+                        <img src="https://img.shields.io/badge/Jetzt%20Spielen-%F0%9F%8E%AE-brightgreen?style=for-the-badge">
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

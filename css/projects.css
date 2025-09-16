@@ -1,0 +1,127 @@
+.screenshot-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 1em 0;
+}
+.screenshot-image {
+    width: 100%;
+    height: auto;
+    border-radius: 1em;
+    box-shadow: 0 4px 24px 0 rgba(0,0,0,0.10);
+    margin-bottom: 0.5em;
+    object-fit: cover;
+    max-width: 90vw;
+    max-height: 100%;
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%);
+    mask-image: linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%);
+}
+.screenshot-textbox {
+    width: 100%;
+    background: rgba(255,255,255,0.99);
+    color: #222;
+    font-size: 1.15rem;
+    font-family: 'Montserrat', sans-serif;
+    padding: 1.2em 0.7em 1em 0.7em;
+    box-shadow: 0 4px 24px 0 rgba(0,0,0,0.10);
+    border-radius: 1em 1em 0 0;
+    border: 1px solid #e0eafc;
+    margin-bottom: 0.5em;
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+}
+
+.screenshot-title {
+    margin: 0;
+}
+
+@media (max-width: 600px) {
+    .screenshot-section,
+    .screenshot-image,
+    .screenshot-textbox {
+        width: 100%;
+        max-width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .screenshot-textbox {
+        padding: 1em;
+    }
+}
+/* Desktop: diagonale Überlappung ab 700px */
+@media (min-width: 850px) {
+    .screenshot-section {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+        justify-content: center;
+        height: auto;
+        position: relative;
+        padding: 0 6vw 40px 6vw;
+        max-width: 1200px;
+        margin: 0 auto;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .screenshot-image {
+        position: relative;
+        width: 68%;
+        min-width: 240px;
+        max-width: 70vw;
+        height: auto;
+        margin: 0 0 0 2em;
+        border-radius: 1.2em;
+        box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.18);
+        z-index: 1;
+        transform: rotate(5deg);
+    }
+
+    .screenshot-textbox {
+        position: relative;
+        width: 68%;
+        min-width: 180px;
+        max-width: 50vw;
+        background: rgba(255, 255, 255, 0.97);
+        color: #222;
+        font-size: 1.15rem;
+        font-family: 'Montserrat', sans-serif;
+        padding: 2.5em 2em 2em 2.5em;
+        box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.22);
+        border-radius: 1.2em;
+        border: 2px solid #55c7fa;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        transform: rotate(-7deg);
+        margin-left: -10px;
+        margin-bottom: -10px;
+    }
+
+    .screenshot-textbox .screenshot-title {
+        font-size: 1.5em;
+    }
+
+    @keyframes screenshot-rotate-shake {
+        0%   { rotate(-7deg); }
+        20%  { rotate(-2deg); }
+        40%  { rotate(2deg); }
+        60%  { rotate(-1deg); }
+        80%  { rotate(1deg); }
+        100% { rotate(-7deg); }
+    }
+
+    .screenshot-image:hover {
+        transform: scale(1.04);
+        animation: screenshot-rotate-shake 0.7s cubic-bezier(.4,2,.3,1);
+    }
+}
